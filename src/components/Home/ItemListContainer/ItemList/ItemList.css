@@ -1,10 +1,5 @@
-/* .wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 2rem;
-} */
-
-.ui.card>.content>.header, .ui.cards>.card>.content>.header{
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
   font-family: 'Gilroy-medium' !important;
 }
 
@@ -13,25 +8,17 @@
 }
 
 .card {
-  /* display: flex !important;
-  justify-content: space-evenly; */
-
-  /* flex-direction: column; */
-  /* height: 400px; */
-
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1rem;
-  /* margin: 50px 20px; */
-  /* height: 600px; */
+
   padding: 50px;
   font-family: 'Gilroy-medium';
-
 }
 
 .ui.card {
   margin: auto !important;
-  /* cursor: pointer; */
+
   height: 500px;
 }
 

@@ -1,8 +1,15 @@
 import React, { useContext } from 'react';
-import { Table, Icon, Button } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+
+// Context
 import { CartContext } from '../../Context/CartContext';
 
+// Semantic
+import { Table, Icon, Button } from 'semantic-ui-react';
+
+// React-Router
+import { Link } from 'react-router-dom';
+
+// Style
 import './Cart.css';
 
 export const Cart = ({ item }) => {
@@ -10,15 +17,15 @@ export const Cart = ({ item }) => {
   const formatPeso = new Intl.NumberFormat('es-AR', {
     style: 'currency',
     currency: 'ARS',
-    minimumFractionDigits: 2
-  })
+    minimumFractionDigits: 2,
+  });
 
-  console.log(formatPeso.format(10000))
+  console.log(formatPeso.format(10000));
 
   return (
-    <>
+    <div className='cart-container'>
       {cart.length > 0 ? (
-        <Table fixed>
+        <Table unstackable>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Producto</Table.HeaderCell>
@@ -38,10 +45,12 @@ export const Cart = ({ item }) => {
                       <p>{item.item}</p>
                     </div>
                   </Table.Cell>
-                  {/* <Table.Cell>${item.price},00</Table.Cell> */}
+
                   <Table.Cell>{formatPeso.format(item.price)}</Table.Cell>
                   <Table.Cell>{item.quantity}</Table.Cell>
-                  <Table.Cell>{formatPeso.format(item.quantity * item.price)}</Table.Cell>
+                  <Table.Cell>
+                    {formatPeso.format(item.quantity * item.price)}
+                  </Table.Cell>
                   <Table.Cell>
                     <Icon
                       onClick={() => deleteItem(item.item)}
@@ -59,20 +68,28 @@ export const Cart = ({ item }) => {
             </>
           ))}
 
-          <Table.Cell></Table.Cell>
-          <Table.Cell></Table.Cell>
-          <Table.Cell></Table.Cell>
-          <Table.Cell>
-            {/* <h3>Subtotal: ${total},00</h3> */}
-
-
-            <h3> Subtotal: {formatPeso.format(total)}</h3>
-          </Table.Cell>
-          <Table.Cell>
-            <Link to='/order'>
-              <Button className='btnFinalizarCompra'>FINALIZAR COMPRA</Button>
-            </Link>
-          </Table.Cell>
+          <Table.Row>
+            <Table.Cell></Table.Cell>
+            <Table.Cell></Table.Cell>
+            <Table.Cell></Table.Cell>
+            <Table.Cell>
+              <h3>
+                {' '}
+                Subtotal: <span>{formatPeso.format(total)}</span>
+              </h3>
+            </Table.Cell>
+            <Table.Cell>
+              <Link to={'/order'}>
+                <Button color='teal'>
+                  <div className='center-btn-cart'>
+                    <i className='shopping cart icon'>
+                      <span>Agregar</span>
+                    </i>
+                  </div>
+                </Button>
+              </Link>
+            </Table.Cell>
+          </Table.Row>
         </Table>
       ) : (
         <div className='cart-container'>
@@ -82,6 +99,6 @@ export const Cart = ({ item }) => {
           </Link>
         </div>
       )}
-    </>
+    </div>
   );
 };

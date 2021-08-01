@@ -1,24 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 
-import { ItemDetail } from "./ItemDetail/ItemDetail";
+// Component
+import { ItemDetail } from './ItemDetail/ItemDetail';
 
-import { Loader, Container } from "semantic-ui-react";
-import { db } from "../../../firebase/firebase";
+// React-Router
+import { useParams } from 'react-router-dom';
+
+// Semantic
+import { Loader, Container } from 'semantic-ui-react';
+
+//Firebase
+import { db } from '../../../firebase/firebase';
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
   const { productID } = useParams();
 
   useEffect(() => {
-    const itemCollection = db.collection("items");
+    const itemCollection = db.collection('items');
     const item = itemCollection.doc(productID);
 
     item
       .get()
       .then((doc) => {
         if (!doc.exists) {
-          setItem("not exist");
+          setItem('not exist');
           return;
         }
 
@@ -30,8 +36,8 @@ export const ItemDetailContainer = () => {
   return (
     <>
       {item.length === 0 ? (
-        <Container className="container-loader">
-          <Loader active inline="centered" size="large">
+        <Container className='container-loader'>
+          <Loader active inline='centered' size='large'>
             Cargando el producto
           </Loader>
         </Container>

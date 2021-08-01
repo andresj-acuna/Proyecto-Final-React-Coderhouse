@@ -33,13 +33,9 @@
   font-style: normal;
 }
 
-
-
 body {
   overflow-x: hidden;
   background: #f1f1f1 !important;
-
-
 }
 
 a,
@@ -60,9 +56,6 @@ a:active,
 a.active {
   color: #17d0d5;
 }
-
-
-
 
 .center {
   display: flex;
@@ -97,8 +90,8 @@ a.active {
 }
 
 .navbar .navbar-brand {
-  font-family: Gilroy-bold, "Helvetica Neue", Helvetica, Arial, cursive;
   color: #1ee2e7;
+  margin-top: 20px;
 }
 
 .navbar .navbar-brand:hover,
@@ -145,12 +138,11 @@ a.active {
 
 .menu li a {
   text-transform: uppercase;
-  /* font-family: Gilroy-regular; */
   font-family: 'system-ui';
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   color: #c9c9c9;
-  padding: 10px 10px;
+  padding: 10px 14px;
   text-decoration: none;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
@@ -160,9 +152,6 @@ a.active {
 
 .menu li a:hover,
 .menu li a:focus {
-  /* outline: 0; */
-  /* background-color: #1ee2e7; */
-  /* border-radius: 3px; */
   color: #1ee2e7;
 }
 

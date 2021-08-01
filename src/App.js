@@ -1,8 +1,7 @@
 import React from 'react';
 import { NavBar } from './components/Home/NavBar/NavBar';
 import { Home } from './components/Home/Home';
-import {ItemListContainer} from './components/Home/ItemListContainer/ItemListContainer'
-
+import { ItemListContainer } from './components/Home/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/Home/ItemDetailContainer/ItemDetailContainer';
 import { Cart } from './components/Cart/Cart';
 import { CartProvider } from './Context/CartContext';
@@ -20,23 +19,23 @@ function App() {
           <NavBar />
 
           <Switch>
-            <Route exact path='/'>
+            <Route exact path='/Proyecto-Final-React-Coderhouse'>
               <Home />
             </Route>
-            <Route path='/categories/:category'>
+            <Route exact path='/categories/:category'>
               <ItemListContainer />
             </Route>
 
-            <Route path='/detalle/:productID'>
+            <Route exact path='/detalle/:productID'>
               <ItemDetailContainer />
             </Route>
-            <Route path='/cart'>
+            <Route exact path='/cart'>
               <Cart />
             </Route>
-            <Route path='/order'>
+            <Route exact path='/order'>
               <BuyForm />
             </Route>
-            <Route path='/my-orders'>
+            <Route exact path='/my-orders'>
               <MyOrders />
             </Route>
           </Switch>
@@ -47,5 +46,3 @@ function App() {
 }
 
 export default App;
-
-// title={"Mi título de ItemListContainer"}

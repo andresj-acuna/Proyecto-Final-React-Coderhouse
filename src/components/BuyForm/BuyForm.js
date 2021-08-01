@@ -10,12 +10,6 @@ import { db } from '../../firebase/firebase';
 //Context
 import { CartContext } from '../../Context/CartContext';
 
-// Semantic
-// import {Form, Input} from 'semantic-ui-react'
-
-//React-router
-import { Link } from 'react-router-dom';
-
 //History
 import { useHistory } from 'react-router-dom';
 
@@ -39,8 +33,11 @@ export const BuyForm = () => {
 
   const [newId, setNewId] = useState();
 
-  // const cartLocal = setCart(itemsInLocal);
-  // console.log(cartLocal);
+  const formatPeso = new Intl.NumberFormat('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+    minimumFractionDigits: 2,
+  });
 
   let history = useHistory();
 
@@ -49,13 +46,15 @@ export const BuyForm = () => {
     }
   }, [cart, history]);
 
-  //Funcion para actualizr los stocks en firestore de los productos recien comprados
+  //Funcion para actualizar los stocks en firestore de los productos recien comprados
   const updateStocks = () => {
     const itemCollection = db.collection('items');
     const bache = db.batch();
 
     cart.forEach((item) => {
-      bache.update(itemCollection.doc(item.id), {stock: item.stock - item.quantity});
+      bache.update(itemCollection.doc(item.id), {
+        stock: item.stock - item.quantity,
+      });
     });
 
     bache
@@ -72,26 +71,22 @@ export const BuyForm = () => {
         buyer: {
           name: `${data.name} ${data.lastname}`,
           phone: data.telephone,
-          email: data.email
+          email: data.email,
         },
         items: cart.map((item) => ({
           id: item.id,
           item: item.item,
           price: item.price,
-          qty: item.quantity
+          qty: item.quantity,
         })),
         date: firebase.firestore.Timestamp.fromDate(new Date()),
-        total: total
+        total: total,
       };
       console.log(order);
       console.log(cart);
       localStorage.removeItem('cart');
       console.log(cart);
       setCart(itemsInLocal);
-
-
-
-
 
       const ordersCollection = db.collection('orders');
 
@@ -100,15 +95,12 @@ export const BuyForm = () => {
         .then(({ id }) => {
           setOrderIds([...orderIds, { id }]);
           setNewId(id);
-
-
         })
         .catch((err) => {
           setError(err);
         })
         .finally(() => {
           updateStocks();
-
 
           newId !== '' && history.push('/my-orders');
         });
@@ -117,10 +109,10 @@ export const BuyForm = () => {
 
   return (
     <div className='buy-form-container'>
+      <h1>Formulario de Compra</h1>
       <form onSubmit={handleSubmit(handleOrder)} className='form-container'>
         <div className='input-field'>
-          {/* <i className='material-icons prefix'>account_circle</i> */}
-          <i className="user icon"></i>
+          <i className='user icon'></i>
           <input
             name='name'
             id='name'
@@ -138,7 +130,7 @@ export const BuyForm = () => {
         </div>
 
         <div className='input-field'>
-        <i className="user icon"></i>
+          <i className='user icon'></i>
           <input
             name='lastname'
             id='lastname'
@@ -156,7 +148,6 @@ export const BuyForm = () => {
         </div>
 
         <div className='input-field'>
-          {/* <i className='material-icons prefix'>phone</i> */}
           <i className='phone icon'></i>
           <input
             name='telephone'
@@ -178,7 +169,6 @@ export const BuyForm = () => {
         </div>
 
         <div className='input-field'>
-          {/* <i className='material-icons prefix'>email</i> */}
           <i className='mail icon'></i>
           <input
             name='email'
@@ -200,7 +190,6 @@ export const BuyForm = () => {
         </div>
 
         <div className='input-field'>
-          {/* <i className='material-icons prefix'>email</i> */}
           <i className='mail icon'></i>
           <input
             name='confirmEmail'
@@ -225,34 +214,28 @@ export const BuyForm = () => {
           {passErr && <small>{'Sus emails son diferentes'}</small>}
         </div>
 
-        {/* Unica forma de que los autocomplete "none" funcionen fue agregando autoComplete = "none" a todos los inputs
-        y crear un ultimo input innecesario (display: none) con autoComplete='on' */}
         <div className='input-field' style={{ display: 'none' }}>
           <i className='material-icons prefix'>email</i>
           <input id='asd' type='email' className='validate' autoComplete='on' />
           <label htmlFor='asd'>Email</label>
         </div>
-        {/* Fin de input innecesario :D */}
 
-        <h5 className='total-amount'>Subtotal &nbsp; ${total}</h5>
+        <h5 className='total-amount'>
+          Subtotal: &nbsp; {formatPeso.format(total)}
+        </h5>
         <span></span>
         {error && <p>{error}</p>}
 
         {
-          // <Link to={'/my-orders'}>
-            <button
-              disabled={confirmEmail !== email}
-              type='submit'
-              className='waves-effect btn btn-buy '
-
-            >
-              Finalizar compra
-            </button>
-          // </Link>
+          <button
+            disabled={confirmEmail !== email}
+            type='submit'
+            className='waves-effect btn btn-buy '
+          >
+            Finalizar compra
+          </button>
         }
       </form>
     </div>
   );
 };
-
-// {confirmEmail !== email}

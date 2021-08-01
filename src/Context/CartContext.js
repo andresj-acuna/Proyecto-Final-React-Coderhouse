@@ -90,8 +90,6 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem('cart', JSON.stringify(editedItems));
   };
 
-
-
   return (
     <CartContext.Provider
       value={{

@@ -21,5 +21,3 @@ export const CartWidget = (props) => {
     </>
   );
 };
-
-// export default CartWidget;

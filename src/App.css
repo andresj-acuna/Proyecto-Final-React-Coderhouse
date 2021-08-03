@@ -37,32 +37,3 @@ body {
   overflow-x: hidden;
   background: #f1f1f1 !important;
 }
-
-/* @media screen and (max-width: 992px) {
-  #root {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 561px) {
-  #root {
-    width: 133%;
-  }
-
-  @media screen and (max-width: 450px) {
-    #root {
-      width: 150%;
-    }
-  }
-
-  @media screen and (max-width: 400px) {
-    #root {
-      width: 150%;
-    }
-  }
-
-  @media screen and (max-width: 350px) {
-    #root {
-      width: 142%;
-    }
-  }
-} */

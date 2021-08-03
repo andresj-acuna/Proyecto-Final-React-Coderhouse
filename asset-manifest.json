@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Proyecto-Final-React-Coderhouse/static/css/main.72b82b4c.chunk.css",
-    "main.js": "/Proyecto-Final-React-Coderhouse/static/js/main.095a0428.chunk.js",
-    "main.js.map": "/Proyecto-Final-React-Coderhouse/static/js/main.095a0428.chunk.js.map",
+    "main.css": "/Proyecto-Final-React-Coderhouse/static/css/main.c99fdfc5.chunk.css",
+    "main.js": "/Proyecto-Final-React-Coderhouse/static/js/main.81e8f092.chunk.js",
+    "main.js.map": "/Proyecto-Final-React-Coderhouse/static/js/main.81e8f092.chunk.js.map",
     "runtime-main.js": "/Proyecto-Final-React-Coderhouse/static/js/runtime-main.06e537ab.js",
     "runtime-main.js.map": "/Proyecto-Final-React-Coderhouse/static/js/runtime-main.06e537ab.js.map",
     "static/css/2.ac6b5632.chunk.css": "/Proyecto-Final-React-Coderhouse/static/css/2.ac6b5632.chunk.css",
-    "static/js/2.bf4a965c.chunk.js": "/Proyecto-Final-React-Coderhouse/static/js/2.bf4a965c.chunk.js",
-    "static/js/2.bf4a965c.chunk.js.map": "/Proyecto-Final-React-Coderhouse/static/js/2.bf4a965c.chunk.js.map",
+    "static/js/2.e589bfa7.chunk.js": "/Proyecto-Final-React-Coderhouse/static/js/2.e589bfa7.chunk.js",
+    "static/js/2.e589bfa7.chunk.js.map": "/Proyecto-Final-React-Coderhouse/static/js/2.e589bfa7.chunk.js.map",
     "index.html": "/Proyecto-Final-React-Coderhouse/index.html",
     "static/css/2.ac6b5632.chunk.css.map": "/Proyecto-Final-React-Coderhouse/static/css/2.ac6b5632.chunk.css.map",
-    "static/css/main.72b82b4c.chunk.css.map": "/Proyecto-Final-React-Coderhouse/static/css/main.72b82b4c.chunk.css.map",
-    "static/js/2.bf4a965c.chunk.js.LICENSE.txt": "/Proyecto-Final-React-Coderhouse/static/js/2.bf4a965c.chunk.js.LICENSE.txt",
+    "static/css/main.c99fdfc5.chunk.css.map": "/Proyecto-Final-React-Coderhouse/static/css/main.c99fdfc5.chunk.css.map",
+    "static/js/2.e589bfa7.chunk.js.LICENSE.txt": "/Proyecto-Final-React-Coderhouse/static/js/2.e589bfa7.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Proyecto-Final-React-Coderhouse/static/media/Gilroy-Regular.319e0b95.ttf",
     "static/media/semantic.min.css": "/Proyecto-Final-React-Coderhouse/static/media/outline-icons.ddae9b1b.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.06e537ab.js",
     "static/css/2.ac6b5632.chunk.css",
-    "static/js/2.bf4a965c.chunk.js",
-    "static/css/main.72b82b4c.chunk.css",
-    "static/js/main.095a0428.chunk.js"
+    "static/js/2.e589bfa7.chunk.js",
+    "static/css/main.c99fdfc5.chunk.css",
+    "static/js/main.81e8f092.chunk.js"
   ]
 }

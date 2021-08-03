@@ -1,3 +1,7 @@
+.item-detail-container {
+  width: auto;
+}
+
 .itemDetail {
   background: white;
   padding: 20px;

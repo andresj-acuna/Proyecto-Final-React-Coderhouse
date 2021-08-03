@@ -1,9 +1,12 @@
-span {
+.cart-widget span {
   color: white;
   font-size: 20px;
+  font-family: 'Gilroy-medium';
+  font-weight: 100;
+  font-size: 16px;
 }
 
-.cart .shopping.cart.icon {
+.cart-widget .shopping.cart.icon {
   color: #fff;
   font-size: 20px;
   font-weight: 100;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Semantic
-import { Container, Button } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 
 // React-Router
 import { Link } from 'react-router-dom';
@@ -43,7 +43,7 @@ export const ItemCount = ({ stock, initial, item, addCart }) => {
   }
 
   return (
-    <Container>
+    <div>
       <div className='buttons-container'>
         <div className='all-buttons'>
           <button
@@ -110,6 +110,6 @@ export const ItemCount = ({ stock, initial, item, addCart }) => {
           </Link>
         )}
       </div>
-    </Container>
+    </div>
   );
 };

@@ -73,7 +73,7 @@ li {
   width: 100%;
 }
 
-.cart {
+.cart-widget {
   display: flex;
   align-items: center;
 }

@@ -11,7 +11,7 @@ export const CartWidget = (props) => {
   return (
     <>
       {items > 0 ? (
-        <div className='cart'>
+        <div className='cart-widget'>
           <Link to='/cart'>
             <i className='shopping cart icon'></i>
           </Link>

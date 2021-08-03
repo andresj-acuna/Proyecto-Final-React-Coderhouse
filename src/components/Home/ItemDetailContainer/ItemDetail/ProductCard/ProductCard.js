@@ -10,7 +10,7 @@ import { ItemCount } from '../../../ItemCount/ItemCount';
 import { CartContext } from '../../../../../Context/CartContext';
 
 // Semantic
-import { Item, Rating } from 'semantic-ui-react';
+import { Rating } from 'semantic-ui-react';
 
 // Style
 import './ProductCard.css';
@@ -37,24 +37,26 @@ export const ProductCard = ({ item }) => {
   };
 
   return (
-    <Item className='item-container'>
-      <Item.Image src={item.imageUrl} className='item-image' />
+    <div className='item-container'>
+      <div className='item-image'>
+        <img src={item.imageUrl} className='item-image' alt='item-detail' />
+      </div>
 
-      <Item.Content className='item-content'>
-        <Item.Header className='item-title'>
+      <div className='item-content'>
+        <div className='item-title'>
           <h2>{item.title}</h2>
-        </Item.Header>
-        <Item.Extra>
+        </div>
+        <div>
           <Rating icon='star' defaultRating={5} maxRating={5} clearable />
-        </Item.Extra>
-        <Item.Header className='item-price'>
+        </div>
+        <div className='item-price'>
           <h3>{formatPeso(item.price)}</h3>
-        </Item.Header>
-        <Item.Description className='item-description'>
+        </div>
+        <div className='item-description'>
           <p>{item.detail}</p>
-        </Item.Description>
+        </div>
 
-        <Item.Extra>
+        <div>
           {item.stock > 0 ? (
             <div className='tags'>
               <span className='tag tag-stock'>En stock</span>
@@ -64,7 +66,7 @@ export const ProductCard = ({ item }) => {
               <span className='tag tag-no-stock'>Sin stock</span>{' '}
             </div>
           )}
-        </Item.Extra>
+        </div>
 
         <ItemCount
           stock={item.stock}
@@ -72,7 +74,7 @@ export const ProductCard = ({ item }) => {
           item={item}
           addCart={addCart}
         />
-      </Item.Content>
-    </Item>
+      </div>
+    </div>
   );
 };

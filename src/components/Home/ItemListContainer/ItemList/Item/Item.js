@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 // Semantic
 import { Card, Image, Button } from 'semantic-ui-react';
+
+// Context
+import { CartContext } from '../../../../../Context/CartContext';
 
 // React-Router
 import { Link } from 'react-router-dom';
 
 export const Item = ({ item }) => {
-  console.log(item);
-  const formatPeso = new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    minimumFractionDigits: 2,
-  });
+  const { formatPeso } = useContext(CartContext);
 
   return (
     <>
@@ -23,7 +21,7 @@ export const Item = ({ item }) => {
             <Card.Header>{data.title}</Card.Header>
 
             <Card.Description>
-              <p>{formatPeso.format(data.price)}</p>
+              <p>{formatPeso(data.price)}</p>
 
               <Link to={`/detalle/${data.id}`}>
                 <Button color='teal'>

@@ -64,7 +64,7 @@ export const ItemCount = ({ stock, initial, item, addCart }) => {
             </div>
           )}
 
-          {stock === 0 ? (
+          {stock === 0 || stock < 0 ? (
             <button disabled={btnStock} className='plus-button'>
               <i className='plus icon'></i>
             </button>

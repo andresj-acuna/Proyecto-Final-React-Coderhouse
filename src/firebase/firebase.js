@@ -1,14 +1,14 @@
-import firebase from "firebase/app";
+import firebase from 'firebase/app';
 
-import "firebase/firestore";
+import 'firebase/firestore';
 
 const config = {
-  apiKey: "AIzaSyBzZ5ZCzDzY89RAqo89WLcUj0QAwVOmsk8",
-  authDomain: "eindhoven-coderhouse.firebaseapp.com",
-  projectId: "eindhoven-coderhouse",
-  storageBucket: "eindhoven-coderhouse.appspot.com",
-  messagingSenderId: "1088849446908",
-  appId: "1:1088849446908:web:4b5c69bded4408f77d9479",
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
+  projectId: `${process.env.REACT_APP_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.REACT_APP_MESSAGING_SENDER_ID}`,
+  appId: `${process.env.REACT_APP_APP_ID}`,
 };
 
 firebase.initializeApp(config);

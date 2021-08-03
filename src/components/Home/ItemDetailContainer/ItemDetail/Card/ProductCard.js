@@ -16,11 +16,7 @@ import { Item, Rating } from 'semantic-ui-react';
 import './ProductCard.css';
 
 export const ProductCard = ({ item }) => {
-  const formatPeso = new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    minimumFractionDigits: 2,
-  });
+  const { formatPeso } = useContext(CartContext);
 
   const [initial, setInitial] = useState(1);
 
@@ -52,7 +48,7 @@ export const ProductCard = ({ item }) => {
           <Rating icon='star' defaultRating={5} maxRating={5} clearable />
         </Item.Extra>
         <Item.Header className='item-price'>
-          <h3>{formatPeso.format(item.price)}</h3>
+          <h3>{formatPeso(item.price)}</h3>
         </Item.Header>
         <Item.Description className='item-description'>
           <p>{item.detail}</p>

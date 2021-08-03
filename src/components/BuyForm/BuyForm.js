@@ -20,8 +20,15 @@ import { useForm } from 'react-hook-form';
 import './BuyForm.css';
 
 export const BuyForm = () => {
-  const { cart, setCart, total, orderIds, setOrderIds, itemsInLocal } =
-    useContext(CartContext);
+  const {
+    cart,
+    setCart,
+    total,
+    orderIds,
+    setOrderIds,
+    itemsInLocal,
+    formatPeso,
+  } = useContext(CartContext);
 
   const { register, handleSubmit, watch, errors } = useForm();
   const email = watch('email');
@@ -32,12 +39,6 @@ export const BuyForm = () => {
   const [error, setError] = useState(false);
 
   const [newId, setNewId] = useState();
-
-  const formatPeso = new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    minimumFractionDigits: 2,
-  });
 
   let history = useHistory();
 
@@ -82,10 +83,9 @@ export const BuyForm = () => {
         date: firebase.firestore.Timestamp.fromDate(new Date()),
         total: total,
       };
-      console.log(order);
-      console.log(cart);
+
       localStorage.removeItem('cart');
-      console.log(cart);
+
       setCart(itemsInLocal);
 
       const ordersCollection = db.collection('orders');
@@ -220,9 +220,7 @@ export const BuyForm = () => {
           <label htmlFor='asd'>Email</label>
         </div>
 
-        <h5 className='total-amount'>
-          Subtotal: &nbsp; {formatPeso.format(total)}
-        </h5>
+        <h5 className='total-amount'>Subtotal: &nbsp; {formatPeso(total)}</h5>
         <span></span>
         {error && <p>{error}</p>}
 

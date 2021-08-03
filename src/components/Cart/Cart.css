@@ -75,6 +75,8 @@
 .cart-container h2 {
   text-align: center;
   margin: 100px !important;
+  font-family: 'Gilroy-medium';
+  font-size: 36px;
 }
 
 .cart-container a {
@@ -84,21 +86,33 @@
 .cart-container .button-regresar {
   width: 80% !important;
   height: 50px !important;
-  font-weight: bold !important;
-  color: #31d622 !important;
-  background-color: #fff !important;
-  border: 2px solid #31d622 !important;
+  font-weight: 100 !important;
+  color: #f2f2f2 !important;
+  background-color: #00b5ad !important;
+  border: 2px solid #00b5ad !important;
   border-radius: 30px !important;
-
-  text-transform: uppercase !important;
-  font-family: sans-serif !important;
+  font-size: 15px !important;
+  font-family: 'Gilroy-medium' !important;
 
   margin-top: 20px !important;
 }
 
 .button-regresar:hover {
-  background-color: rgba(245, 245, 245, 1) !important;
+  background-color: #00b5ad;
   transition: all 0.4s !important;
+  opacity: 0.85;
+}
+
+.ui.table .ui.teal.button {
+  width: 131px;
+  height: 45px;
+
+  border-radius: 200px;
+  border: none;
+
+  outline: none;
+  font-family: 'Gilroy-medium';
+  font-weight: 100;
 }
 
 .ui.teal.button {
@@ -136,4 +150,10 @@ button .i.icon {
 .ui.teal.buttons .button:hover {
   background-color: #00b5ad !important;
   opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+  .cart-container .ui.table {
+    width: 70% !important;
+  }
 }

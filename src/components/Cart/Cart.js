@@ -13,19 +13,12 @@ import { Link } from 'react-router-dom';
 import './Cart.css';
 
 export const Cart = ({ item }) => {
-  const { cart, total, deleteItem } = useContext(CartContext);
-  const formatPeso = new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    minimumFractionDigits: 2,
-  });
-
-  console.log(formatPeso.format(10000));
+  const { cart, total, deleteItem, formatPeso } = useContext(CartContext);
 
   return (
     <div className='cart-container'>
       {cart.length > 0 ? (
-        <Table unstackable>
+        <Table>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Producto</Table.HeaderCell>
@@ -46,10 +39,10 @@ export const Cart = ({ item }) => {
                     </div>
                   </Table.Cell>
 
-                  <Table.Cell>{formatPeso.format(item.price)}</Table.Cell>
+                  <Table.Cell>{formatPeso(item.price)}</Table.Cell>
                   <Table.Cell>{item.quantity}</Table.Cell>
                   <Table.Cell>
-                    {formatPeso.format(item.quantity * item.price)}
+                    {formatPeso(item.quantity * item.price)}
                   </Table.Cell>
                   <Table.Cell>
                     <Icon
@@ -75,17 +68,13 @@ export const Cart = ({ item }) => {
             <Table.Cell>
               <h3>
                 {' '}
-                Subtotal: <span>{formatPeso.format(total)}</span>
+                Subtotal: <span>{formatPeso(total)}</span>
               </h3>
             </Table.Cell>
             <Table.Cell>
               <Link to={'/order'}>
                 <Button color='teal'>
-                  <div className='center-btn-cart'>
-                    <i className='shopping cart icon'>
-                      <span>Agregar</span>
-                    </i>
-                  </div>
+                  <span>Finalizar Compra</span>
                 </Button>
               </Link>
             </Table.Cell>
@@ -94,8 +83,13 @@ export const Cart = ({ item }) => {
       ) : (
         <div className='cart-container'>
           <h2 className='text-cart'>Tu carrito está vacío</h2>
-          <Link to='/' className='link-carrito'>
-            <Button className='button-regresar'>Volver a la tienda</Button>
+          <Link
+            to={'/Proyecto-Final-React-Coderhouse'}
+            className='link-carrito'
+          >
+            <Button className='button-regresar'>
+              <i className='reply icon'></i>Volver a la tienda
+            </Button>
           </Link>
         </div>
       )}

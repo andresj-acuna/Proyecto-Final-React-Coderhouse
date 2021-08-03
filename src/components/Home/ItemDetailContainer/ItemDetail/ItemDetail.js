@@ -13,11 +13,9 @@ export const ItemDetail = ({ item }) => {
     <>
       <Container className='item-detail-container'>
         <Container className='itemDetail' key={item.id}>
-          <div className='wrapper'>
-            <Container>
-              <ProductCard item={item}></ProductCard>
-            </Container>
-          </div>
+          <Container>
+            <ProductCard item={item}></ProductCard>
+          </Container>
         </Container>
       </Container>
     </>

@@ -6,6 +6,8 @@ import { DateTime } from 'luxon';
 //Context
 import { CartContext } from '../../Context/CartContext';
 
+import { Button } from 'semantic-ui-react';
+
 //Firestore
 import { db } from '../../firebase/firebase';
 
@@ -13,7 +15,7 @@ import { db } from '../../firebase/firebase';
 import './MyOrders.css';
 
 export const MyOrders = () => {
-  const { orderIds, setOrderIds } = useContext(CartContext);
+  const { orderIds, setOrderIds, formatPeso } = useContext(CartContext);
 
   const [ordersInfo, setOrdersInfo] = useState([]);
 
@@ -51,23 +53,23 @@ export const MyOrders = () => {
   return (
     <div className='orders-container'>
       <div className='orders-organizer'>
-        <h3 className='title'>Mis compras</h3>
-
-        <button
-          className='btn-clear'
-          onClick={() => {
-            localStorage.removeItem('my-orders');
-            setOrderIds([]);
-          }}
-        >
-          Borrar historial
-        </button>
-
         <div className='orders-columns'>
           <p>Fecha</p>
           <p>Productos</p>
           <p>Codigo de pedido</p>
           <p>Total</p>
+        </div>
+        <div className='order-clear'>
+          <Button
+            color='red'
+            className='btn-clear'
+            onClick={() => {
+              localStorage.removeItem('my-orders');
+              setOrderIds([]);
+            }}
+          >
+            Borrar historial
+          </Button>
         </div>
         <div className='orders'>
           {ordersInfo.length > 0 &&
@@ -94,7 +96,7 @@ export const MyOrders = () => {
                   </ul>
                 </div>
                 <div className='order-info id '> {id} </div>
-                <div className='order-info total'> ${total} </div>
+                <div className='order-info total'> {formatPeso(total)} </div>
               </div>
             ))}
         </div>
@@ -102,3 +104,5 @@ export const MyOrders = () => {
     </div>
   );
 };
+
+//${total}

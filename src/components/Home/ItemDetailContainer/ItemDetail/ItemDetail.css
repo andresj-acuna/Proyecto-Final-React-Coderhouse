@@ -1,11 +1,15 @@
-.item-detail-container {
-  min-height: 100vh;
+.ui.container.item-detail-container {
+  /* width: 700px !important; */
 }
 
 .itemDetail {
   background: white;
   padding: 20px;
   border-radius: 5px;
+}
+
+.ui.container.itemDetail {
+  /* width: 600px !important;  */
 }
 
 .buttons-compra {

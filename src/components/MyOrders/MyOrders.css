@@ -31,8 +31,9 @@
   border-radius: 5px;
   width: 90%;
   max-height: 80vh;
-  background-color: #1ee2e7;
+  background-color: #00c5aa;
   border: 1px solid #c9c9c9;
+  margin-bottom: 60px;
 }
 
 .orders-container .orders-organizer .title {
@@ -89,10 +90,11 @@
 .orders-container .orders-organizer .orders-columns p {
   width: 25%;
   text-align: center;
-  color: #ffffff;
+  color: #00c5aa;
   margin: 0;
-  font-weight: 100;
-  font-size: 22px;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Lato';
 }
 
 .orders-container .orders-organizer .orders {
@@ -113,7 +115,7 @@
 }
 
 .orders-container .orders-organizer .orders::-webkit-scrollbar-thumb {
-  background-color: #1ee2e7;
+  background-color: #00c5aa;
 }
 
 .orders-container .orders-organizer .orders .order-row {
@@ -125,10 +127,19 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 2px solid #7a7a7a;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
   padding: 4px;
   min-height: 48px;
   font-weight: 600;
+  font-size: 16px;
+}
+
+.ui.red.button,
+.ui.red.buttons .button {
+  background-color: #e64949;
+  font-size: 13px;
+  font-family: 'Gilroy-medium';
+  font-weight: 100;
 }
 
 @media screen and (min-width: 300px) and (max-width: 1000px) {
@@ -144,7 +155,7 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    background-color: #1ee2e7;
+    background-color: #00c5aa;
     padding: 3px;
     z-index: 1;
     -webkit-user-select: none;
@@ -155,7 +166,7 @@
 }
 
 .orders-container .orders-organizer .orders .order-row:first-child .id {
-  background-color: #1ee2e7;
+  background-color: #00c5aa;
 }
 
 .orders-container .orders-organizer .orders .order-row .order-info {
@@ -171,4 +182,11 @@
   ul
   li::marker {
   color: white;
+}
+
+.order-clear {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+  height: 60px;
 }

@@ -19,6 +19,14 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const formatPeso = (value) => {
+    return new Intl.NumberFormat('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+      minimumFractionDigits: 2,
+    }).format(value);
+  };
+
   const [cart, setCart] = useState(itemsInLocal);
   const [items, setItems] = useState(0);
   const [total, setTotal] = useState(0);
@@ -27,7 +35,6 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     updateItems();
     localStorage.setItem('cart', JSON.stringify(cart));
-    console.log(cart);
     localStorage.setItem('my-orders', JSON.stringify(orderIds));
     getTotal();
   });
@@ -105,6 +112,7 @@ export const CartProvider = ({ children }) => {
         setOrderIds,
         itemsInLocal,
         ordersInLocal,
+        formatPeso,
       }}
     >
       {children}

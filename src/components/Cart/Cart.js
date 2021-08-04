@@ -55,9 +55,13 @@ export const Cart = ({ item }) => {
           </div>
           <div className='cart-total'>
             <p className='total-amount'>Subtotal {formatPeso(total)}</p>
-            <Link to='/order' className='waves-effect btn'>
-              Finalizar compra
-            </Link>
+            <div className='finish-buy'>
+              <Link to={'/order'}>
+                <Button color='teal'>
+                  <span>Finalizar Compra</span>
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -20,6 +20,12 @@
   width: 35px;
 }
 
+.cart-button .ui.teal.button {
+  width: 131px;
+  height: 40px;
+  border-radius: 200px;
+}
+
 p {
   font-size: 25px;
   font-family: 'Gilroy-medium';

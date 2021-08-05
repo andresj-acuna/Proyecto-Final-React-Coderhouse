@@ -5,12 +5,25 @@
   margin-top: 40px;
 }
 
+.ui.button.button-back {
+  display: flex;
+  width: 100px;
+  margin-bottom: 20px;
+  color: #00c5aa;
+}
+
+.ui.button.button-back:hover,
+.ui.button.button-back:active,
+.ui.button.button-back:focus {
+  color: #00c5aa;
+}
+
 .item-container {
   display: flex;
   font-family: 'Gilroy-medium';
   background-color: #fff;
   margin: auto;
-  width: 60%;
+  width: 65%;
   border-radius: 10px;
   height: 65vh;
 }
@@ -33,11 +46,10 @@
   padding-right: 30px;
   padding-top: 20px;
   display: flex;
-  /* width: 500px; */
+
   width: 55%;
   flex-direction: column;
   justify-content: center;
-  /* width: 500px; */
 }
 
 .item-title h2 {
@@ -170,14 +182,11 @@
 
   .item-image {
     margin: auto 0px;
-    /* padding-top: 20px;
-    padding-left: 20px; */
     width: 100%;
   }
 
   .item-image img {
     width: 280px;
-    /* margin-right: 5px; */
     border: none;
     margin: auto;
   }

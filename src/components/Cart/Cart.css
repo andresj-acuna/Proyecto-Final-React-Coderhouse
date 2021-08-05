@@ -178,21 +178,23 @@
   margin-top: 20px !important;
 }
 
-.button-back-home:hover {
-  background-color: #00b5ad;
-  transition: all 0.4s !important;
-  opacity: 0.85;
-}
-
-.button-back-container {
+.cart-container .button-back-container {
+  width: 85%;
   display: flex;
   justify-content: flex-start;
-  width: 100%;
 }
 
-.button-back-container .button-back {
-  font-size: 18px;
+.ui.button.button-back {
+  display: flex;
+  width: 100px;
   margin-bottom: 20px;
+  color: #00c5aa;
+}
+
+.ui.button.button-back:hover,
+.ui.button.button-back:active,
+.ui.button.button-back:focus {
+  color: #00c5aa;
 }
 
 .button-back span {
@@ -261,7 +263,7 @@
   }
 
   .button-back-container .button-back {
-    font-size: 20px;
+    font-size: 1rem;
   }
 }
 
@@ -297,7 +299,7 @@
   }
 
   .button-back-container .button-back {
-    font-size: 21px;
+    font-size: 1rem;
   }
 }
 

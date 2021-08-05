@@ -37,7 +37,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 70px auto;
+  margin: 10px auto;
   width: 100%;
   max-width: 420px;
   min-height: 520px;
@@ -169,4 +169,14 @@
 .mail.icon {
   color: #7a7a7a;
   font-size: 20px;
+}
+
+@media (min-width: 350px) {
+  .buy-form-container .button-back-container {
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    max-width: 420px;
+  }
 }

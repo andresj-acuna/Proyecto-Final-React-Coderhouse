@@ -59,11 +59,11 @@ export const MyOrders = () => {
   return (
     <div className='orders-container'>
       <div className='button-back-container'>
-        <button className='button-back' onClick={() => history.goBack()}>
+        <Button className='button-back' onClick={() => history.goBack()}>
           <i className='arrow left icon'>
             <span>Volver</span>
           </i>
-        </button>
+        </Button>
       </div>
       <div className='orders-organizer'>
         <div className='orders-columns'>

@@ -10,7 +10,7 @@ import { ItemCount } from '../../../ItemCount/ItemCount';
 import { CartContext } from '../../../../../Context/CartContext';
 
 // Semantic
-import { Rating } from 'semantic-ui-react';
+import { Rating, Button } from 'semantic-ui-react';
 
 // React-router
 import { useHistory } from 'react-router-dom';
@@ -44,11 +44,11 @@ export const ProductCard = ({ item }) => {
   return (
     <>
       <div className='button-back-container'>
-        <button className='button-back' onClick={() => history.goBack()}>
+        <Button className='button-back' onClick={() => history.goBack()}>
           <i className='arrow left icon'>
             <span>Volver</span>
           </i>
-        </button>
+        </Button>
       </div>
       <div className='item-container'>
         <div className='item-image'>

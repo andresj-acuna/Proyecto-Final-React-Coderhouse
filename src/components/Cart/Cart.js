@@ -21,7 +21,6 @@ export const Cart = ({ item }) => {
   const history = useHistory();
 
   const toasti = () => {
-    console.log('toasti');
     toast.success(
       `Estás a un solo paso! Completá el formulario para coordinar la entrega del producto.`,
       {
@@ -40,11 +39,11 @@ export const Cart = ({ item }) => {
     return (
       <div className='cart-container'>
         <div className='button-back-container'>
-          <button className='button-back' onClick={() => history.goBack()}>
+          <Button className='button-back' onClick={() => history.goBack()}>
             <i className='arrow left icon'>
               <span>Volver</span>
             </i>
-          </button>
+          </Button>
         </div>
 
         <div className='cart'>

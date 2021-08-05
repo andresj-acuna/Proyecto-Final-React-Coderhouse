@@ -16,6 +16,9 @@ import { useHistory } from 'react-router-dom';
 //Hook-Form
 import { useForm } from 'react-hook-form';
 
+// Semantic
+import { Button } from 'semantic-ui-react';
+
 // Toastify
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,6 +44,8 @@ export const BuyForm = () => {
   const [passErr, setPassErr] = useState(false);
 
   const [error, setError] = useState(false);
+
+  const [loading, setLoading] = useState(false);
 
   const [newId, setNewId] = useState();
 
@@ -102,7 +107,7 @@ export const BuyForm = () => {
         date: firebase.firestore.Timestamp.fromDate(new Date()),
         total: total,
       };
-
+      setLoading(true);
       localStorage.removeItem('cart');
 
       setCart(itemsInLocal);
@@ -122,6 +127,7 @@ export const BuyForm = () => {
           updateStocks();
 
           newId !== '' && history.push('/my-orders');
+          toasti();
         });
     }
   };
@@ -129,6 +135,13 @@ export const BuyForm = () => {
   return (
     <div className='buy-form-container'>
       <h1>Formulario de Compra</h1>
+      <div className='button-back-container'>
+        <Button className='button-back' onClick={() => history.goBack()}>
+          <i className='arrow left icon'>
+            <span>Volver</span>
+          </i>
+        </Button>
+      </div>
       <form onSubmit={handleSubmit(handleOrder)} className='form-container'>
         <div className='input-field'>
           <i className='user icon'></i>
@@ -243,16 +256,19 @@ export const BuyForm = () => {
         <span></span>
         {error && <p>{error}</p>}
 
-        {
+        {loading ? (
+          <button type='submit' className='waves-effect btn btn-buy'>
+            Finalizar compra
+          </button>
+        ) : (
           <button
             disabled={confirmEmail !== email}
             type='submit'
-            className='waves-effect btn btn-buy '
-            onClick={toasti}
+            className='waves-effect btn btn-buy'
           >
             Finalizar compra
           </button>
-        }
+        )}
       </form>
     </div>
   );

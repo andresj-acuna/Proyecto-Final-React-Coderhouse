@@ -1,10 +1,16 @@
+.item-detail-container .button-back-container {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 .item-container {
   display: flex;
   font-family: 'Gilroy-medium';
   background-color: #fff;
   margin: auto;
   width: 60%;
-  margin-top: 50px;
   border-radius: 10px;
   height: 65vh;
 }
@@ -237,11 +243,9 @@
   }
 
   .item-description {
-    /* width: 280px; */
     width: auto;
     height: auto;
     padding-right: 10px;
-    /* height: 180px; */
   }
 
   .item-description p {
@@ -250,9 +254,7 @@
   }
 
   .item-image {
-    /* margin-top: 10px; */
     margin: 0 auto;
-    /* padding: 10px; */
     padding-right: 0;
     width: 100%;
   }
@@ -275,7 +277,6 @@
   }
 
   .item-content {
-    /* padding-left: 20px; */
     width: 90%;
     padding-top: 20px;
     padding-right: 0;

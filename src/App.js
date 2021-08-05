@@ -7,7 +7,8 @@ import { Cart } from './components/Cart/Cart';
 import { CartProvider } from './Context/CartContext';
 import { BuyForm } from './components/BuyForm/BuyForm';
 import { MyOrders } from './components/MyOrders/MyOrders';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import './App.css';
 
@@ -17,28 +18,27 @@ function App() {
       <CartProvider>
         <Router>
           <NavBar />
-
           <Switch>
-            <Route exact path='/Proyecto-Final-React-Coderhouse'>
+            <Route exact path='/'>
               <Home />
             </Route>
-            <Route exact path='/categories/:category'>
+            <Route path='/categories/:category'>
               <ItemListContainer />
             </Route>
-
-            <Route exact path='/detalle/:productID'>
+            <Route path='/detalle/:productID'>
               <ItemDetailContainer />
             </Route>
-            <Route exact path='/cart'>
+            <Route path='/cart'>
               <Cart />
             </Route>
-            <Route exact path='/order'>
+            <Route path='/order'>
               <BuyForm />
             </Route>
-            <Route exact path='/my-orders'>
+            <Route path='/my-orders'>
               <MyOrders />
             </Route>
           </Switch>
+          <ToastContainer />
         </Router>
       </CartProvider>
     </>

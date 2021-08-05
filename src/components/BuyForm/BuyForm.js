@@ -16,6 +16,10 @@ import { useHistory } from 'react-router-dom';
 //Hook-Form
 import { useForm } from 'react-hook-form';
 
+// Toastify
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Styles
 import './BuyForm.css';
 
@@ -41,6 +45,21 @@ export const BuyForm = () => {
   const [newId, setNewId] = useState();
 
   let history = useHistory();
+
+  const toasti = () => {
+    toast.success(
+      `Compra realizada con éxito! El código del pedido resaltado es el más reciente.`,
+      {
+        position: 'bottom-left',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      },
+    );
+  };
 
   useEffect(() => {
     if (cart.length !== 0) {
@@ -229,6 +248,7 @@ export const BuyForm = () => {
             disabled={confirmEmail !== email}
             type='submit'
             className='waves-effect btn btn-buy '
+            onClick={toasti}
           >
             Finalizar compra
           </button>

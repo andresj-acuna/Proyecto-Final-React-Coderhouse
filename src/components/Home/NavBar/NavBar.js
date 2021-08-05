@@ -25,8 +25,8 @@ export const NavBar = (props) => {
 
   return (
     <nav className='navbar'>
-      <Link className='nav-logo' to={'/Proyecto-Final-React-Coderhouse'}>
-        <img src={logo} alt='logo eindhoven' />
+      <Link className='nav-logo' to={'/'}>
+        <img src={logo} alt='Logo Eindhoven' />
       </Link>
       <div className='nav-content'>
         <ul
@@ -34,7 +34,7 @@ export const NavBar = (props) => {
           onClick={handleToggle}
         >
           <li className='nav-item'>
-            <Link to={'/Proyecto-Final-React-Coderhouse'} className='nav-link'>
+            <Link to={'/'} className='nav-link'>
               Home
             </Link>
           </li>

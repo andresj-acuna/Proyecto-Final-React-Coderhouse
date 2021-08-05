@@ -16,8 +16,9 @@
   -ms-flex-align: center;
   align-items: center;
   background-color: #f2f2f2;
-  width: 100%;
+  width: 85%;
   height: auto;
+  margin: auto;
   min-height: 90vh;
 
   font-family: 'Gilroy-medium';

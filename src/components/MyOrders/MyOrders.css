@@ -18,6 +18,11 @@
   font-family: 'Gilroy-medium';
 }
 
+.orders-container .button-back-container {
+  width: 85%;
+  margin-top: 20px;
+}
+
 .orders-container .orders-organizer {
   display: -webkit-box;
   display: -ms-flexbox;

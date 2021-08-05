@@ -6,6 +6,10 @@ import { DateTime } from 'luxon';
 //Context
 import { CartContext } from '../../Context/CartContext';
 
+// React-router
+import { useHistory } from 'react-router-dom';
+
+// Semantic
 import { Button } from 'semantic-ui-react';
 
 //Firestore
@@ -18,6 +22,8 @@ export const MyOrders = () => {
   const { orderIds, setOrderIds, formatPeso } = useContext(CartContext);
 
   const [ordersInfo, setOrdersInfo] = useState([]);
+
+  const history = useHistory();
 
   useEffect(() => {
     let isMounted = true;
@@ -52,6 +58,13 @@ export const MyOrders = () => {
 
   return (
     <div className='orders-container'>
+      <div className='button-back-container'>
+        <button className='button-back' onClick={() => history.goBack()}>
+          <i className='arrow left icon'>
+            <span>Volver</span>
+          </i>
+        </button>
+      </div>
       <div className='orders-organizer'>
         <div className='orders-columns'>
           <p>Fecha</p>
@@ -104,5 +117,3 @@ export const MyOrders = () => {
     </div>
   );
 };
-
-//${total}

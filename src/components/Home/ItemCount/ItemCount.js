@@ -6,6 +6,10 @@ import { Button } from 'semantic-ui-react';
 // React-Router
 import { Link } from 'react-router-dom';
 
+// Toastify
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Style
 import './ItemCount.css';
 
@@ -24,6 +28,26 @@ export const ItemCount = ({ stock, initial, item, addCart }) => {
 
   const addOneItem = (e) => {
     count < stock ? setCount(count + 1) : console.log('Ha superado el stock');
+  };
+
+  const toasti = () => {
+    toast.success(
+      `${
+        count > 1
+          ? `Se han agregado ${count} productos a tu carrito`
+          : `Se ha agregado ${count} producto a tu carrito`
+      }.
+      `,
+      {
+        position: 'bottom-left',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      },
+    );
   };
 
   if (stock === 0) {
@@ -45,6 +69,7 @@ export const ItemCount = ({ stock, initial, item, addCart }) => {
   return (
     <div>
       <div className='buttons-container'>
+        <ToastContainer></ToastContainer>
         <div className='all-buttons'>
           <button
             disabled={btnDel}
@@ -99,7 +124,10 @@ export const ItemCount = ({ stock, initial, item, addCart }) => {
               color='teal'
               disabled={btnStock}
               className='btn_Carrito'
-              onClick={() => addCart(count, item)}
+              onClick={() => {
+                addCart(count, item);
+                toasti();
+              }}
             >
               <div className='center-btn-cart'>
                 <i className='shopping cart icon'>

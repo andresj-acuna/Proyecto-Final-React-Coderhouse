@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.04dec8b6.chunk.css",
-    "main.js": "/static/js/main.413f2876.chunk.js",
-    "main.js.map": "/static/js/main.413f2876.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.cdd65d59.js",
-    "runtime-main.js.map": "/static/js/runtime-main.cdd65d59.js.map",
-    "static/css/2.b7cec006.chunk.css": "/static/css/2.b7cec006.chunk.css",
-    "static/js/2.ad43de20.chunk.js": "/static/js/2.ad43de20.chunk.js",
-    "static/js/2.ad43de20.chunk.js.map": "/static/js/2.ad43de20.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.b7cec006.chunk.css.map": "/static/css/2.b7cec006.chunk.css.map",
-    "static/css/main.04dec8b6.chunk.css.map": "/static/css/main.04dec8b6.chunk.css.map",
-    "static/js/2.ad43de20.chunk.js.LICENSE.txt": "/static/js/2.ad43de20.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/Gilroy-Regular.319e0b95.ttf",
-    "static/media/semantic.min.css": "/static/media/outline-icons.ddae9b1b.woff"
+    "main.css": "/Proyecto-Final-React-Coderhouse/static/css/main.6b972123.chunk.css",
+    "main.js": "/Proyecto-Final-React-Coderhouse/static/js/main.00323cf4.chunk.js",
+    "main.js.map": "/Proyecto-Final-React-Coderhouse/static/js/main.00323cf4.chunk.js.map",
+    "runtime-main.js": "/Proyecto-Final-React-Coderhouse/static/js/runtime-main.06e537ab.js",
+    "runtime-main.js.map": "/Proyecto-Final-React-Coderhouse/static/js/runtime-main.06e537ab.js.map",
+    "static/css/2.f8858b20.chunk.css": "/Proyecto-Final-React-Coderhouse/static/css/2.f8858b20.chunk.css",
+    "static/js/2.c028ad8d.chunk.js": "/Proyecto-Final-React-Coderhouse/static/js/2.c028ad8d.chunk.js",
+    "static/js/2.c028ad8d.chunk.js.map": "/Proyecto-Final-React-Coderhouse/static/js/2.c028ad8d.chunk.js.map",
+    "index.html": "/Proyecto-Final-React-Coderhouse/index.html",
+    "static/css/2.f8858b20.chunk.css.map": "/Proyecto-Final-React-Coderhouse/static/css/2.f8858b20.chunk.css.map",
+    "static/css/main.6b972123.chunk.css.map": "/Proyecto-Final-React-Coderhouse/static/css/main.6b972123.chunk.css.map",
+    "static/js/2.c028ad8d.chunk.js.LICENSE.txt": "/Proyecto-Final-React-Coderhouse/static/js/2.c028ad8d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Proyecto-Final-React-Coderhouse/static/media/Gilroy-Regular.319e0b95.ttf",
+    "static/media/semantic.min.css": "/Proyecto-Final-React-Coderhouse/static/media/outline-icons.ddae9b1b.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.cdd65d59.js",
-    "static/css/2.b7cec006.chunk.css",
-    "static/js/2.ad43de20.chunk.js",
-    "static/css/main.04dec8b6.chunk.css",
-    "static/js/main.413f2876.chunk.js"
+    "static/js/runtime-main.06e537ab.js",
+    "static/css/2.f8858b20.chunk.css",
+    "static/js/2.c028ad8d.chunk.js",
+    "static/css/main.6b972123.chunk.css",
+    "static/js/main.00323cf4.chunk.js"
   ]
 }

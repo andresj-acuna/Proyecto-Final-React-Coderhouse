@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Proyecto Final en React de Coderhouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://andresj-acuna.github.io/Proyecto-Final-React-Coderhouse/
 
-## Available Scripts
+Proyecto realizado en React Js y conectado a Firebase. Todos los productos se encuentran alojados en Firestore y las ordenes generadas se guardan ahí tambien. El sitio muestra en la homepage distintos productos electrónicos, tales como, televisores, celulares, consolas de juegos, y sus distintos accesorios. 
 
-In the project directory, you can run:
+# Funcionamiento 🚀
 
-### `npm start`
+![ezgif-7-0160b3f76192](https://user-images.githubusercontent.com/78426464/127942748-2235bf9b-78d4-439a-85f0-4614e0bbabea.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Al navegar sobre celulares, televisores o gaming se filtrarán los productos según la categoria seleccionada y los mostrará en pantalla.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![ezgif com-gif-maker (10)](https://user-images.githubusercontent.com/78426464/128369350-9b895b7f-070c-429c-8643-c6e1d58c1c38.gif)
 
-### `npm test`
+Al clickear sobre un producto en particular nos enviara al detalle del mismo donde existirá la posibilidad de seleccionar la cantidad y sumar la cantidad deseada al carrito.
+Luego en el carrito estará el detalle de todos los productos a comprar, y al clickear en el botón "Finalizar compra", nos dirigirá a un formulario de compra para ingresar los datos
+del cliente y finalizar la misma.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![ezgif com-gif-maker (13)](https://user-images.githubusercontent.com/78426464/128381504-901e146d-4522-4538-a75d-25c4f9d9b372.gif)
 
-### `npm run build`
+Para finalizar se agregará la compra realizada en "Mis compras" que llevará el registro de todas las compras que realice el usuario.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Herramientas 🛠️
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Utilicé los siguientes hooks:_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* useState
+* useEffect
+* useParams
+* useHistory
+* useContext
+* useCallback
 
-### `npm run eject`
+_Librerias externas:_
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [Semantic Ui React](https://react.semantic-ui.com/) 
+* [React Router DOM](https://reactrouter.com/web/guides/quick-start) 
+* [React Hook Form](https://react-hook-form.com/) 
+* [Luxon](https://moment.github.io/luxon/#/?id=luxon)
+* [React-Toastify](https://www.npmjs.com/package/react-toastify)
+---
+⌨️ con ❤️ por [Andrés Acuña](https://github.com/andresj-acuna) 😊
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
